@@ -8,7 +8,7 @@ _CloudGoat is Rhino Security Labs' "Vulnerable by Design" AWS deployment tool._
 </p>
 
 
-# Quick reference
+# Quick reference!
 - **Where to get help**:
 [the CloudGoat Community Slack](https://join.slack.com/t/pacu-cloudgoat/shared_invite/enQtNDE3OTk0MjA3NTA2LTRmOTVmZjEyYjIzOTYxMGJmZDc4ZDVkOGU3ZmJlOWZhNzdkYWQ2ZmQxNTFjZThjMmJlMDFmMTU4NzUwMDM2NmY), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=cloudgoat)
 
