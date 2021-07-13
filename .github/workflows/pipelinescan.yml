@@ -56,28 +56,4 @@ jobs:
         name: ScanResults
         path: results.json
 
-  # Convert pipeline scan output to SARIF format  
-  process-results:
-    needs: pipeline-scan
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: Retrieve results
-      uses: actions/download-artifact@v2
-      with:
-        name: ScanResults
-
-    - name: Convert pipeline scan output to SARIF format
-      id: convert
-      uses: Veracode/veracode-pipeline-scan-results-to-sarif@v0.1.2
-      with:
-        pipeline-results-json: results.json
-        output-results-sarif: veracode-results.sarif
-        source-base-path-1: "^com/veracode:src/main/java/com/veracode"
-        source-base-path-2: "^WEB-INF:src/main/webapp/WEB-INF"
-        finding-rule-level: "3:1:0"
-
-    - name: upload sarif file to repository
-      uses: github/codeql-action/upload-sarif@v1
-      with: # Path to SARIF file relative to the root of the repository
-        sarif_file: veracode-results.sarif
+ 
